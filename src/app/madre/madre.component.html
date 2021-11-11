@@ -1,0 +1,50 @@
+<h2>Hola Buen Día!</h2>
+<p>Completar los datos de la madre</p>
+<form [formGroup]="madres" (ngSubmit)="save($event)">
+    <div class="row mb-4">
+        <div class="col">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" formControlName="nombre">
+        </div>
+        <div class="col">
+            <label class="form-label">Apellido</label>
+            <input type="text" class="form-control" name="apellido" formControlName="apellido">
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <label class="form-label">Tipo Doc</label>
+            <select class="form-select" formControlName="tipoDoc">
+                <option value="DNI">DNI</option>
+                <option value="PAS">Pasaporte</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Número de doc</label>
+            <input type="number" class="form-control" name="numDoc" formControlName="numDoc">
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-success" type="submit">Saluda</button>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Tipo Doc</th>
+            <th scope="col">Número Doc</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>madre.nombre</td>
+            <td>mostrarApellido</td>
+            <td>mostrarSelect</td>
+            <td>mostrarNumero</td>
+        </tr>
+    </tbody>
+</table>
